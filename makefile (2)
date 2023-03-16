@@ -1,0 +1,6 @@
+generator: generator.c 3d.o
+	gcc -Wall -Werror -std=c11 generator.c 3d.o -o generator -lm
+3d.o: 3d.c 3d.h
+	gcc -Wall -Werror -std=c11 3d.c -c -o 3d.o -lm
+clean:
+	rm -f 3d.o generator
